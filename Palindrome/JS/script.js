@@ -22,8 +22,9 @@ function isPalindroma(wordToReverse) {
 
 const wordRequest = prompt("Inserisci una parola");
 
-// If di verifica
 
+// If di verifica
+// if (isPalindroma(wordRequest) === true)
 if (isPalindroma(wordRequest)) {
   console.log("è palindroma");
 } else {
