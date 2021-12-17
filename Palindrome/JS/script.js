@@ -10,12 +10,14 @@ function isPalindroma(wordToReverse) {
     console.log(result);
   }
 
-  // If Booleano, con true esce
-  if (result === wordToReverse) {
-    return true;
-  }
-  // implicito
-  return false;
+  // // If Booleano, con true esce
+  // if (result === wordToReverse) {
+  //   return true;
+  // }
+  // // implicito
+  // return false;
+
+  return result === wordRequest // alternativa + pulita === ritorna un booleano
 }
 
 // Prompt
