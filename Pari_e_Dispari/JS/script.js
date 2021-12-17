@@ -7,9 +7,7 @@ Dichiariamo chi ha vinto. */
 // Funzione random
 
 function randomNumber(min, max) {
-  const result = Math.floor(Math.random() * (max + 1 - min)) + min;
-  // Return per poterla portare fuori
-  return result;
+  return result = Math.floor(Math.random() * (max + 1 - min)) + min;
 }
 
 // Funzione isPari
@@ -22,6 +20,15 @@ function isPari(num) {
   //   }
 
   return num % 2 == 0; // super pulto ed equivalente a quello sopra
+}
+
+// Funzione userWin
+
+function userWin(totalNumber, userSelection) {
+  return (
+    (isPari(totalNumber) && userSelection === "pari") ||
+    (!isPari(totalNumber) && userSelection === "dispari")
+  );
 }
 
 // prompt utente sceglie pari o dispari
@@ -40,11 +47,19 @@ const total = userNumber + machineNumber;
 
 // If per il risultato
 
-if (isPari(total) && userChoice === "pari") {
-  console.log("Hai vinto");
-} else if (isPari(total) && userChoice !== "pari") {
-  console.log("Hai perso");
-} else if (!isPari(total) && userChoice === "dispari") {
+// if (isPari(total) && userChoice === "pari") {
+//   console.log("Hai vinto");
+// } else if (isPari(total) && userChoice !== "pari") {
+//   console.log("Hai perso");
+// } else if (!isPari(total) && userChoice === "dispari") {
+//   console.log("Hai vinto");
+// } else {
+//   console.log("Hai perso");
+// }
+
+// If per il risultato con la funzione userWin
+
+if (userWin(total, userChoice)) {
   console.log("Hai vinto");
 } else {
   console.log("Hai perso");
